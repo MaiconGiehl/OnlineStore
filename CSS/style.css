@@ -2,6 +2,10 @@ body {
     padding: 0;
     margin: 0;
 }
+
+/* LOJA */
+
+
 .nav-link,
 .navbar-brand {
     cursor: pointer;
@@ -17,4 +21,29 @@ body {
     background-color: black;
     font-size: 20px;
     font-style: italic;
+}
+
+/* ADICIONAR ITENS */
+#criarItens {
+    align-items: center;
+}
+
+/* SOBRE */
+
+#container-leandro {
+    height: 30vw;
+    width: 100%;
+    /* adicionando imagem de fundo */
+    background: url('bg-img.jpg');
+    background-size: cover;
+}
+
+.page-footer {
+    background-color: #222;
+    color: #ccc;
+    padding: 100px 0 30px;
+}
+.footer-copyright {
+    color: #666;
+    padding: 66px 0;
 }
