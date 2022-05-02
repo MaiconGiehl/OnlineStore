@@ -1,62 +1,43 @@
-window.onload = function createLocalStorage () {
-    let produtosCache = localStorage.getItem(`Produtos`)
-    if (produtosCache == 0) {
-        localStorage.setItem('Produtos', 0)
-    }
-}
+const arrayProdutos = [];
 
-function arrayProdutos () {
-    
-    let produtosCache = localStorage.getItem(`Produtos`)
-  
-    if (produtosCache != 0) {
-            produtos.push(produtosCache)
-            console.log(produtos)
-    }
-}
-var id = 0;
+window.onload = function pushLocalStorage() {
+    let cache = localStorage.getItem('Produtos');
+    cache = JSON.parse(cache);
 
+    cache.forEach(produto => {
+        arrayProdutos.push(produto);
+    });
+};
 
+function post() {
 
+    let tituloProduto = document.getElementById("newProduct_title").value;
+    let corProduto = document.getElementById("newProduct_color").value;
+    let descProduto = document.getElementById("newProduct_desc").value;
+    let precoProduto = document.getElementById("newProduct_price").value;
+    let tecidoProduto = document.getElementById("newProduct_tissue").value;
 
-
-function post () {
-    
-    let nomeProduto = document.getElementById("newProduct_name").value
-    let descProduto = document.getElementById("newProduct_desc").value
-    let preco = document.getElementById("newProduct_price").value
-    
-    if (nomeProduto != 0 && descProduto != 0 && preco != 0) {
-        let produtoNovo = {
-            id: 3,
-            nomeProduto: `${nomeProduto}`,
-            descricao: `${descProduto}`,
-            valor: `${preco}`,
+    if (tituloProduto != 0 && descProduto != 0 && precoProduto != 0 && corProduto != 0 && tecidoProduto != 0) {
+        let produto = {
+            id: arrayProdutos.length,
+            titulo: tituloProduto,
+            descricao: descProduto,
+            cor: corProduto,
+            preco: precoProduto,
+            tecido: tecidoProduto,
             url: false,
-            status: true
         };
-        
-        produtos.push(produtoNovo);
-        console.log(produtos)
 
-        localStorage.setItem(`Produtos`, produtos)
+        arrayProdutos.push(produto);
+        saveAtLocalStorage()
+        alert("Produto Adicionado com Sucesso!")
 
-        criarProduto(produtoNovo.id)
     } else {
         alert("insere valor válido, cabeção")
     }
-
 }
 
-
-
-function criarProduto (id) {
-    const container = document.createElement("container");
-    container.class = "page-footer"
-
-    const h1 = document.createElement("h1")
-    h1.textContent = produtos[id]
-
-    const divItens = document.getElementById("itens")
-    document.body.appendChild(container)
+function saveAtLocalStorage() {
+    produtos = JSON.stringify(arrayProdutos);
+    localStorage.setItem('Produtos', produtos);
 }

@@ -3,16 +3,46 @@ body {
     margin: 0;
 }
 
-/* LOJA */
+a {
+    color: #000;
+}
 
+#logo {
+    max-width: 5%;
+    max-height: 5%;
+}
+
+
+/* ADICIONAR ITENS */
+#btnAdc {
+    text-align: right;
+}
+
+.btn-success {
+    font-size: 30px;
+    width: 100px;
+}
+
+#titleAdicionar {
+    text-align: center;
+    border-bottom: solid black 3px;
+}
+
+#criarItens {
+    margin-top: 1%;
+}
+
+/* LOJA */
 
 .nav-link,
 .navbar-brand {
     cursor: pointer;
 }
+
 .nav-link:hover {
     color: #000;
 }
+
 .navbar-collapse {
     justify-content: flex-end;
 }
@@ -23,9 +53,31 @@ body {
     font-style: italic;
 }
 
-/* ADICIONAR ITENS */
-#criarItens {
-    align-items: center;
+.grid {
+    display: grid;
+    border: 0 none;
+
+}
+
+.grid-template-columns {
+    grid-template-columns: 900px 900px;
+}
+
+.produtosVenda {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#tabelaProdutos {
+    justify-content: center;
+}
+
+img.camisas {
+    cursor: pointer;
+    max-height: 400px;
+    max-height: 500px;
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
 
 /* SOBRE */
@@ -43,6 +95,7 @@ body {
     color: #ccc;
     padding: 100px 0 30px;
 }
+
 .footer-copyright {
     color: #666;
     padding: 66px 0;
