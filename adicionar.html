@@ -20,9 +20,14 @@
 
     <div>
         <nav id="navLoja" class="navbar navbar-expand-md navbar-dark">
-            <img id="logo"
-                src="https://images.vexels.com/media/users/3/142896/isolated/preview/4998c28a6aa8b9b774b4927ab50b6228-m-letra-redemoinhos-isotipo.png"
-                alt="">
+            <div id="lojaRedirect">
+                <a href="loja.html">
+                    <img id="logo"
+                        src="https://images.vexels.com/media/users/3/142896/isolated/preview/4998c28a6aa8b9b774b4927ab50b6228-m-letra-redemoinhos-isotipo.png"
+                        alt="">
+                    <h1 id="nomeLoja">Maicao Store</h1>
+                </a>
+            </div>
             </button>
             <div class="collapse navbar-collapse" id="main-navigation">
                 <ul class="navbar-nav">
@@ -38,7 +43,8 @@
                 </ul>
             </div>
         </nav>
-        <form action="">
+    </div>
+    <form action="">
         <div id="criarItens" class="container">
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -46,13 +52,10 @@
                     <input type="text" class="form-control" id="newProduct_title" placeholder="Ex: Camisa Polo Branca">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="">Cor</label>
-                    <select id="newProduct_color" class="form-control">
-                        <option value="0" selected>Escolher...</option>
-                        <option value="white">Branco</option>
-                        <option value="black">Preto</option>
-                        <option value="red">Vermelho</option>
-                    </select>
+                    <label for="">URL da Imagem</label>
+                    <input id="newProduct_img" class="form-control" placeholder="Ex: https://myImage.png">
+                        
+                    </input>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="">Preço (em real, sem centavos)</label>
@@ -71,7 +74,7 @@
                 <button type="submit" class="btn btn-primary" onclick="post()">Postar produto</button>
             </div>
         </div>
-        </form>
+    </form>
 </body>
 
 </html>

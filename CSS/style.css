@@ -1,17 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
 body {
     padding: 0;
     margin: 0;
 }
 
-a {
-    color: #000;
+
+a:hover {
+    text-decoration: none;
 }
 
 #logo {
-    max-width: 5%;
-    max-height: 5%;
+    max-width: 10%;
+    max-height: 10%;
 }
 
+#nomeLoja {
+    display: inline;
+    font-size: 175%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 30px;
+    margin-top: 80px;
+    color: white;
+}
+
+#nomeLoja:hover {
+    color: rgb(167, 20, 20);
+}
 
 /* ADICIONAR ITENS */
 #btnAdc {
@@ -72,12 +87,15 @@ a {
     justify-content: center;
 }
 
-img.camisas {
+.camisas {
     cursor: pointer;
     max-height: 400px;
-    max-height: 500px;
+    min-height: 400px;
+    max-width: 400px;
+    min-width: 400px;
     margin-top: 30px;
     margin-bottom: 15px;
+    
 }
 
 /* SOBRE */

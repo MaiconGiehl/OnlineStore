@@ -12,20 +12,19 @@ window.onload = function pushLocalStorage() {
 function post() {
 
     let tituloProduto = document.getElementById("newProduct_title").value;
-    let corProduto = document.getElementById("newProduct_color").value;
+    let imgProduto = document.getElementById("newProduct_img").value;
     let descProduto = document.getElementById("newProduct_desc").value;
     let precoProduto = document.getElementById("newProduct_price").value;
     let tecidoProduto = document.getElementById("newProduct_tissue").value;
 
-    if (tituloProduto != 0 && descProduto != 0 && precoProduto != 0 && corProduto != 0 && tecidoProduto != 0) {
+    if (tituloProduto != 0 && descProduto != 0 && precoProduto != 0 && imgProduto != 0 && tecidoProduto != 0) {
         let produto = {
             id: arrayProdutos.length,
             titulo: tituloProduto,
             descricao: descProduto,
-            cor: corProduto,
             preco: precoProduto,
             tecido: tecidoProduto,
-            url: false,
+            url: imgProduto,
         };
 
         arrayProdutos.push(produto);
