@@ -5,7 +5,6 @@ body {
     margin: 0;
 }
 
-
 a:hover {
     text-decoration: none;
 }
@@ -13,6 +12,11 @@ a:hover {
 #logo {
     max-width: 10%;
     max-height: 10%;
+}
+
+#logo:hover {
+    background-color: rgb(144, 143, 143);
+    border-radius: 5px;
 }
 
 #nomeLoja {
@@ -71,16 +75,26 @@ a:hover {
 .grid {
     display: grid;
     border: 0 none;
-
 }
 
 .grid-template-columns {
-    grid-template-columns: 900px 900px;
+    grid-template-columns: 600px 600px 600px;
 }
 
 .produtosVenda {
+    cursor: pointer;
+    margin-left: 5%;
+    margin-right: 5%;
     text-align: center;
     margin-top: 50px;
+    border: 2px solid;
+    border-radius: 30px;
+    background-color: rgb(240, 240, 240);
+}
+
+.produtosVenda:hover {
+    background-color: rgb(233, 233, 233);
+    border: none;
 }
 
 #tabelaProdutos {
@@ -88,14 +102,13 @@ a:hover {
 }
 
 .camisas {
-    cursor: pointer;
     max-height: 400px;
     min-height: 400px;
     max-width: 400px;
     min-width: 400px;
     margin-top: 30px;
     margin-bottom: 15px;
-    
+
 }
 
 /* SOBRE */
@@ -103,8 +116,6 @@ a:hover {
 #container-leandro {
     height: 30vw;
     width: 100%;
-    /* adicionando imagem de fundo */
-    background: url('bg-img.jpg');
     background-size: cover;
 }
 

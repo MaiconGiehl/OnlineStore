@@ -29,10 +29,11 @@ function post() {
 
         arrayProdutos.push(produto);
         saveAtLocalStorage()
-        alert("Produto Adicionado com Sucesso!")
+        alert("Produto adicionado com sucesso!")
 
     } else {
-        alert("insere valor válido, cabeção")
+        alert("Preencha todos os campos.")
+
     }
 }
 
