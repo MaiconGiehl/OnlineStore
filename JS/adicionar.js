@@ -28,11 +28,11 @@ function post() {
         };
 
         arrayProdutos.push(produto);
-        saveAtLocalStorage()
-        alert("Produto adicionado com sucesso!")
+        saveAtLocalStorage();
+        alert("Produto adicionado com sucesso!");
 
     } else {
-        alert("Preencha todos os campos.")
+        alert("Preencha todos os campos.");
 
     }
 }
